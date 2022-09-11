@@ -5,12 +5,57 @@
 
 .nav-list{
     display: flex;
+    padding: 0;
 }
 
 .nav-item{
     padding: 0 5px;
+    color: rgb(97, 97, 97);
+    list-style: none;
+    text-decoration: none;
+    transition: .2s;
+    border-radius: 5px;
+}
+
+.nav-logo{
     color: black;
     list-style: none;
     border: none;
     text-decoration: none;
+}
+
+.nav-item:hover{
+    color: black;
+}
+
+.burger{
+    display: none;
+    height: 50px;
+    width: 50px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+@media (max-width: 500px){
+    /* -----Agregar cuando haga eventos------ 
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } */
+    .nav-list{
+        display: none;
+        flex-direction: column;
+    }
+    .burger{
+        display: flex;
+        flex-direction: column;
+    }
 }
