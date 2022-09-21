@@ -1,0 +1,8 @@
+.item-count-container{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+.item-count-container h3{
+    margin: 10px;
+}
