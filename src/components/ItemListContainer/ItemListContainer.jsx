@@ -1,15 +1,32 @@
 import "./ItemListContainer.css"
-import ItemCount from '../ItemCount/ItemCount';
-
+import React, {useState, useEffect} from "react";
+import ItemCount from "../ItemCount/ItemCount";
+import getItems from "../../services/mockAPI";
+import ItemList from "./ItemList/ItemList";
 
 function ItemListContainer(props) {
-  // -----NAVBAR RETURN-----
-    return (
-      <div>
-        <h1>{props.greeting}</h1>
-        <ItemCount initial={1} stock={20}/>
 
-      </div>
+  let [data, setData] = useState([]);
+
+  useEffect(() => {
+    getItems().then((vehicleData) => {
+      setData(vehicleData);
+     });
+  }, [])
+  // -----BODY RETURN-----
+    return (
+      <>
+        {/* ---HEADER--- */}
+        <div className="header">
+          <h1>{props.greeting}</h1>
+        </div>
+        <hr />
+        {/* ---CARDS--- */}
+        <div className="content">
+          <ItemList data={data}/>
+          
+        </div>
+      </>
     );
   }
 

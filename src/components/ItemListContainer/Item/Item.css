@@ -1,0 +1,23 @@
+.card{
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid white;
+    margin: 1rem;
+}
+
+.card:hover{
+    box-shadow: 1px black;
+}
+
+.card-img img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.card-btn{
+    margin: 1rem !important;
+}

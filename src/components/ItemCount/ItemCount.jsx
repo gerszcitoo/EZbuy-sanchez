@@ -21,7 +21,7 @@ function ItemCount({stock, initial}) {
     }
     // -----ITEMCOUNT RETURN----
     return (
-      <div>
+      <div className="add-to-cart-container">
         <div className="item-count-container">
             <Button variant="contained" size="small" onClick={handleTake}>-</Button>
             <h3>{count}</h3>
