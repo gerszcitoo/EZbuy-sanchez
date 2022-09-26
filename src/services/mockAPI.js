@@ -100,3 +100,11 @@ export default function getItems(){
         }, 1500)
     })
 }
+
+export function getSingleItem(){
+  return new Promise( (resolve, reject) => {
+      setTimeout( () => {
+          resolve(data[0]);
+      }, 1500)
+  })
+}
