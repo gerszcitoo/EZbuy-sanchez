@@ -1,0 +1,7 @@
+.category-container {
+  display: flex;
+}
+
+.category-button {
+  margin: 1rem;
+}

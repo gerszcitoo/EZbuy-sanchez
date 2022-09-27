@@ -1,25 +1,38 @@
-import "./NavBar.css"
+import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   // -----NAVBAR RETURN-----
-    return (
-      <nav className="navbar">
-        <a className="nav-logo" href=""><p>EZbuy</p></a>
-        <div className="burger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <ul className="nav-list">
-          <a className="nav-item" href=""><li>Inicio</li></a>
-          <a className="nav-item" href=""><li>Servicios</li></a>
-          <a className="nav-item" href=""><li>Tienda</li></a>
-          <a className="nav-item" href=""><li>Contacto</li></a>
-          <a className="nav-item" href=""><CartWidget /></a>
-        </ul>
-      </nav>
-    );
-  }
+  return (
+    <nav className="navbar">
+      <Link className="nav-logo" to="/">
+        <p>EZbuy</p>
+      </Link>
+      <div className="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul className="nav-list">
+        <Link className="nav-item" to="/">
+          <li>Inicio</li>
+        </Link>
+        <Link className="nav-item" to="/categorias">
+          <li>Categorías</li>
+        </Link>
+        <Link className="nav-item" to="/">
+          <li>Tienda</li>
+        </Link>
+        <Link className="nav-item" to="">
+          <li>Contacto</li>
+        </Link>
+        <Link className="nav-item" to="">
+          <CartWidget />
+        </Link>
+      </ul>
+    </nav>
+  );
+}
 
 export default NavBar;
