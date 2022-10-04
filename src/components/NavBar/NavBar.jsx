@@ -3,13 +3,19 @@ import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+  // ----BURGER MENU (WIP)----
+  function handleBurger(evt) {
+    console.log(evt.target.style);
+    let style = evt.target.style;
+    style.backgroundColor = "red";
+  }
   // -----NAVBAR RETURN-----
   return (
     <nav className="navbar">
       <Link className="nav-logo" to="/">
         <p>EZbuy</p>
       </Link>
-      <div className="burger">
+      <div onClick={handleBurger} className="burger">
         <div></div>
         <div></div>
         <div></div>
