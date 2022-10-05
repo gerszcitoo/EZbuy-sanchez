@@ -2,21 +2,36 @@ import "./ItemListContainer.css";
 import React, { useState, useEffect } from "react";
 import getItems, { getItemsByCategory } from "../../services/mockAPI";
 import ItemList from "./ItemList/ItemList";
+import Loader from "../Loader/Loader";
 import { useParams } from "react-router-dom";
 
 function ItemListContainer(props) {
-  let [data, setData] = useState([]);
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const { cat } = useParams();
 
   useEffect(() => {
+    setIsLoading(true);
+    setData([]);
     if (cat === undefined) {
-      getItems().then((vehicleData) => {
-        setData(vehicleData);
-      });
+      getItems()
+        .then((vehicleData) => {
+          setData(vehicleData);
+        })
+        .catch((errormsg) => {
+          setError(errormsg.message);
+        })
+        .finally(() => setIsLoading(false));
     } else {
-      getItemsByCategory(cat).then((vehicleData) => {
-        setData(vehicleData);
-      });
+      getItemsByCategory(cat)
+        .then((vehicleData) => {
+          setData(vehicleData);
+        })
+        .catch((errormsg) => {
+          setError(errormsg.message);
+        })
+        .finally(() => setIsLoading(false));
     }
   }, [cat]);
   // -----BODY RETURN-----
@@ -28,6 +43,7 @@ function ItemListContainer(props) {
       </div>
       <hr />
       {/* ---CARDS--- */}
+      {isLoading && <Loader />}
       <div className="content">
         <ItemList data={data} />
       </div>

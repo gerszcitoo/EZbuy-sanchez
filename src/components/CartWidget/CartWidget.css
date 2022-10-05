@@ -1,0 +1,9 @@
+.cart-items {
+  padding: 0 5px;
+  border-radius: 25px;
+  background-color: rgb(203, 17, 17);
+  color: white;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}

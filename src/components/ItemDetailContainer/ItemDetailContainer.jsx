@@ -2,17 +2,38 @@ import React, { useState, useEffect } from "react";
 import { getSingleItem } from "../../services/mockAPI";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function ItemDetailContainer() {
-  let [data, setData] = useState({});
+  const [data, setData] = useState({});
+  const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   // use params for URL
   const { id } = useParams();
 
   useEffect(() => {
-    getSingleItem(id).then((vehicleData) => {
-      setData(vehicleData);
-    });
+    getSingleItem(id)
+      .then((vehicleData) => setData(vehicleData))
+      .catch((errormsg) => {
+        setError(errormsg.message);
+      })
+      .finally(() => setIsLoading(false));
   }, [id]);
+
+  if (isLoading) {
+    return (
+      <>
+        {error ? (
+          <div>
+            <h3 style={{ color: "#aa003" }}>Error obteniendo los datos</h3>
+            <p>{error}</p>
+          </div>
+        ) : (
+          <Loader />
+        )}
+      </>
+    );
+  }
   // -----BODY RETURN-----
   return (
     <div className="item-detail-container">
