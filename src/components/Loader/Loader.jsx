@@ -1,5 +1,4 @@
 import React from "react";
-import { NewtonsCradle } from "@uiball/loaders";
 import { Ring } from "@uiball/loaders";
 
 function Loader() {
