@@ -30,7 +30,6 @@ function ItemListContainer(props) {
           setData(vehicleData);
         })
         .catch((errormsg) => {
-          console.log(error);
           setError(errormsg.message);
         })
         .finally(() => setIsLoading(false));
