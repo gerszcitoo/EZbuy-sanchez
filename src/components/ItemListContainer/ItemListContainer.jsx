@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 
 function ItemListContainer(props) {
   const [data, setData] = useState([]);
-  const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const { cat } = useParams();
 
@@ -19,18 +18,11 @@ function ItemListContainer(props) {
         .then((vehicleData) => {
           setData(vehicleData);
         })
-        .catch((errormsg) => {
-          console.log(error);
-          setError(errormsg.message);
-        })
         .finally(() => setIsLoading(false));
     } else {
       getItemsByCategory(cat)
         .then((vehicleData) => {
           setData(vehicleData);
-        })
-        .catch((errormsg) => {
-          setError(errormsg.message);
         })
         .finally(() => setIsLoading(false));
     }
