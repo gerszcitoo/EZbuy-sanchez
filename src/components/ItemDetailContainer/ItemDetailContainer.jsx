@@ -20,12 +20,13 @@ function ItemDetailContainer() {
       .finally(() => setIsLoading(false));
   }, [id]);
 
+  // if page loads => render this
   if (isLoading) {
     return (
       <>
         {error ? (
           <div>
-            <h3 style={{ color: "#aa003" }}>Error obteniendo los datos</h3>
+            <h3>Error obteniendo los datos</h3>
             <p>{error}</p>
           </div>
         ) : (
@@ -33,14 +34,33 @@ function ItemDetailContainer() {
         )}
       </>
     );
+    // if there is an error => render this
+  } else if (error) {
+    return (
+      <>
+        {error ? (
+          <div>
+            <h3>Error obteniendo los datos</h3>
+            <p>{error}</p>
+          </div>
+        ) : (
+          <div className="item-detail-container">
+            <h1>{data.title}</h1>
+            <ItemDetail data={data} />
+          </div>
+        )}
+      </>
+    );
+    // if everything works => render this
+  } else {
+    return (
+      <div className="item-detail-container">
+        <h1>{data.title}</h1>
+        <ItemDetail data={data} />
+      </div>
+    );
   }
   // -----BODY RETURN-----
-  return (
-    <div className="item-detail-container">
-      <h1>{data.title}</h1>
-      <ItemDetail data={data} />
-    </div>
-  );
 }
 
 export default ItemDetailContainer;

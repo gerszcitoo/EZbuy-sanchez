@@ -35,7 +35,7 @@ function ItemDetail(props) {
         <ItemCount initial={1} stock={info.stock} onAdd={HandleAdd} />
       ) : (
         <Link to="/cart">
-          <Button>Finalizar Compra</Button>
+          <Button>Ver Carrito</Button>
         </Link>
       )}
     </div>
