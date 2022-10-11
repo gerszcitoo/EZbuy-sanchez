@@ -6,7 +6,7 @@ const data = [
     year: 2009,
     img: "/assets/vehicles/bmw5series.jpg",
     category: "Sedan",
-    price: 127850,
+    price: 10200,
     stock: 1,
   },
   {
@@ -16,7 +16,7 @@ const data = [
     year: 2008,
     img: "/assets/vehicles/bmwalpinab7.jpg",
     category: "Sedan",
-    price: 646833,
+    price: 40000,
     stock: 1,
   },
   {
@@ -26,7 +26,7 @@ const data = [
     year: 2004,
     img: "/assets/vehicles/bmw645.jpg",
     category: "Coupe",
-    price: 109810,
+    price: 10600,
     stock: 1,
   },
   {
@@ -36,7 +36,7 @@ const data = [
     year: 2002,
     img: "/assets/vehicles/lincolnnavigator.jpg",
     category: "Camioneta",
-    price: 630130,
+    price: 6150,
     stock: 2,
   },
   {
@@ -46,7 +46,7 @@ const data = [
     year: 2013,
     img: "/assets/vehicles/hyundaielantra.jpg",
     category: "Compacto",
-    price: 951880,
+    price: 8240,
     stock: 5,
   },
   {
@@ -56,7 +56,7 @@ const data = [
     year: 1991,
     img: "/assets/vehicles/oldsmobilecustomcruiser.jpg",
     category: "Sedan",
-    price: 780467,
+    price: 19000,
     stock: 1,
   },
   {
@@ -66,7 +66,7 @@ const data = [
     year: 2000,
     img: "/assets/vehicles/mazdabseriesplus.jpg",
     category: "Camioneta",
-    price: 600725,
+    price: 6995,
     stock: 4,
   },
   {
@@ -76,7 +76,7 @@ const data = [
     year: 1995,
     img: "/assets/vehicles/mercedesbenz300e.jpg",
     category: "Sedan",
-    price: 640822,
+    price: 4950,
     stock: 1,
   },
   {
@@ -86,7 +86,7 @@ const data = [
     year: 2015,
     img: "/assets/vehicles/fordfiestast.jpg",
     category: "Compacto",
-    price: 154180,
+    price: 15250,
     stock: 2,
   },
   {
@@ -96,7 +96,7 @@ const data = [
     year: 2006,
     img: "/assets/vehicles/buickrainier.jpg",
     category: "Camioneta",
-    price: 817957,
+    price: 7520,
     stock: 3,
   },
 ];

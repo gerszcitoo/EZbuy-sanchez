@@ -6,6 +6,7 @@ const cartContext = createContext();
 export default function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
 
+  // ---ADD ITEM TO CART---
   function addItem(item, count) {
     // ---IF ITEM IS IN CART---
     if (isInCart(item.data.id)) {
@@ -26,23 +27,41 @@ export default function CartContextProvider({ children }) {
 
   //   ---TOTAL ITEMS ON CART---
   function getTotalItemsInCart() {
-    let total = 0;
-    cart.forEach((item) => {
-      total = total + item.count;
-    });
-    return total;
+    return cart.reduce((acc, item) => (acc += item.count), 0);
   }
 
   //   ---ITEM IS IN CART---
   function isInCart(id) {
-    let found = cart.some((item) => item.data.id === id);
-    return found;
+    return cart.some((item) => item.data.id === id);
+  }
+
+  // ---EMPTY CART---
+  function emptyCart() {
+    return setCart([]);
+  }
+
+  // ---DELETE ITEM---
+  function deleteItem(id) {
+    return setCart(cart.filter((item) => item.data.id !== id));
+  }
+
+  // ---GET ITEM PRICE---
+  function getItemPrice() {
+    return cart.reduce((acc, item) => (acc += item.data.price * item.count), 0);
   }
 
   //   ---CONTEXT RETURN---
   return (
     <cartContext.Provider
-      value={{ cart, addItem, getTotalItemsInCart, isInCart }}
+      value={{
+        cart,
+        addItem,
+        getTotalItemsInCart,
+        isInCart,
+        emptyCart,
+        deleteItem,
+        getItemPrice,
+      }}
     >
       {children}
     </cartContext.Provider>

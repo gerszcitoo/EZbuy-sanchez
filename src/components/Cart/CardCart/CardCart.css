@@ -1,0 +1,17 @@
+.cart-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  margin-bottom: 1rem;
+}
+
+.cart-card img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.badge {
+  cursor: pointer;
+}

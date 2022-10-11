@@ -24,19 +24,24 @@ function ItemDetail(props) {
       {info.stock === 0 && <span>SIN STOCK</span>}
       <img
         src={info.img}
-        alt={info.brand + " " + info.model + " " + info.ItemDetailyear}
+        alt={info.brand + " " + info.model + " " + info.year}
       />
       <h1>
         {info.brand} {info.model}
       </h1>
       <p>{info.year}</p>
-      <p>$ {info.price}</p>
+      <p>US${info.price}</p>
       {!countState ? (
         <ItemCount initial={1} stock={info.stock} onAdd={HandleAdd} />
       ) : (
-        <Link to="/cart">
-          <Button>Ver Carrito</Button>
-        </Link>
+        <div className="options">
+          <Link to="/cart">
+            <Button variant="contained">Ver Carrito</Button>
+          </Link>
+          <Link to="/">
+            <Button variant="contained">Seguir Comprando</Button>
+          </Link>
+        </div>
       )}
     </div>
   );

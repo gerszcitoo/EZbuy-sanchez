@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 function NavBar() {
   // ----BURGER MENU (WIP)----
   function handleBurger(evt) {
-    console.log(evt.target.style);
     let style = evt.target.style;
     style.backgroundColor = "red";
   }
+
   // -----NAVBAR RETURN-----
   return (
     <nav className="navbar">

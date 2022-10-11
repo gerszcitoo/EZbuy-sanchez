@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import CategoryContainer from "./components/CategoryContainer/CategoryContainer";
+import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartContextProvider from "./context/cartContext";
 
@@ -25,7 +26,7 @@ function App() {
                 element={<ItemListContainer greeting="Bienvenido a EZbuy" />}
               />
               <Route path="/autos/:id" element={<ItemDetailContainer />} />
-              <Route path="/cart" element={<h1>Cart</h1>} />
+              <Route path="/cart" element={<Cart />} />
               <Route path="*" element={<h1>404</h1>} />
             </Routes>
           </header>

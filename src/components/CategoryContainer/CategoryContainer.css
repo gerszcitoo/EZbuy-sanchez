@@ -5,3 +5,9 @@
 .category-button {
   margin: 1rem;
 }
+
+@media (max-width: 600px) {
+  .category-container {
+    flex-direction: column;
+  }
+}
