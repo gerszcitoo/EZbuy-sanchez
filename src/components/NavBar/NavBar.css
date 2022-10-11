@@ -36,6 +36,7 @@
   background-color: white;
   overflow: hidden;
   margin-top: 5rem;
+  top: 0;
 }
 
 .menu {
@@ -107,6 +108,7 @@
 
 .side-menu:checked ~ nav {
   max-height: 90%;
+  top: 0;
 }
 
 .side-menu:checked ~ .hamb .hamb-line {
