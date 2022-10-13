@@ -7,7 +7,7 @@ const data = [
     img: "/assets/vehicles/bmw5series.jpg",
     category: "Sedan",
     price: 10200,
-    stock: 1,
+    stock: 2,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const data = [
     img: "/assets/vehicles/bmwalpinab7.jpg",
     category: "Sedan",
     price: 40000,
-    stock: 1,
+    stock: 2,
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const data = [
     img: "/assets/vehicles/bmw645.jpg",
     category: "Coupe",
     price: 10600,
-    stock: 1,
+    stock: 2,
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const data = [
     img: "/assets/vehicles/lincolnnavigator.jpg",
     category: "Camioneta",
     price: 6150,
-    stock: 2,
+    stock: 3,
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const data = [
     img: "/assets/vehicles/hyundaielantra.jpg",
     category: "Compacto",
     price: 8240,
-    stock: 5,
+    stock: 7,
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const data = [
     img: "/assets/vehicles/oldsmobilecustomcruiser.jpg",
     category: "Sedan",
     price: 19000,
-    stock: 1,
+    stock: 3,
   },
   {
     id: 7,
@@ -77,7 +77,7 @@ const data = [
     img: "/assets/vehicles/mercedesbenz300e.jpg",
     category: "Sedan",
     price: 4950,
-    stock: 1,
+    stock: 3,
   },
   {
     id: 9,

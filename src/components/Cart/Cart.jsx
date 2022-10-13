@@ -29,9 +29,9 @@ function Cart() {
   // ---CART RETURN---
   return (
     <>
-      <Link to="/" className="borrar-cart">
-        <Button onClick={emptyCart}>Borrar carrito</Button>
-      </Link>
+      <Button onClick={emptyCart} className="borrar-cart">
+        Borrar carrito
+      </Button>
       <div className="cart-body">
         <CardCart />
       </div>
