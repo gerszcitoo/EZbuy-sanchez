@@ -3,7 +3,6 @@ import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  // -----NAVBAR RETURN-----
   return (
     <div className="navbar">
       <Link className="nav-logo" to="/">

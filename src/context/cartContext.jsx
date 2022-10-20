@@ -46,7 +46,7 @@ export default function CartContextProvider({ children }) {
   }
 
   // ---GET ITEM PRICE---
-  function getItemPrice() {
+  function getTotalItemPrice() {
     return cart.reduce((acc, item) => (acc += item.data.price * item.count), 0);
   }
 
@@ -60,7 +60,7 @@ export default function CartContextProvider({ children }) {
         isInCart,
         emptyCart,
         deleteItem,
-        getItemPrice,
+        getTotalItemPrice,
       }}
     >
       {children}

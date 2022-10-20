@@ -11,6 +11,7 @@ function CardCart() {
     <>
       {cart.map((item) => (
         <Badge
+          key={item.data.id}
           badgeContent={"x"}
           color="error"
           onClick={() => deleteItem(item.data.id)}

@@ -7,6 +7,7 @@ import {
   getDoc,
   query,
   where,
+  addDoc,
 } from "firebase/firestore";
 
 // Your web app's Firebase configuration
@@ -51,6 +52,12 @@ export async function getSingleItem(idItem) {
   } catch (error) {
     console.log(error);
   }
+}
+
+export async function createBuyOrder(orderData) {
+  const collectionRef = collection(database, "orders");
+  let respuesta = await addDoc(collectionRef, orderData);
+  return respuesta.id;
 }
 
 export default database;
