@@ -26,6 +26,19 @@ input:focus-visible {
   outline: none;
 }
 
+/* ---HIDE ARROWS ON NUMBER INPUT---*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
 /* ----WARNING MSG---- */
 .data-petition {
   font-size: 0.7rem;

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { cartContext } from "../../context/cartContext";
@@ -16,6 +16,7 @@ function CheckoutForm() {
     phone: "",
     email: "",
   });
+  const [formValidation, setFormValidation] = useState(false);
 
   function inputChangeHandler(e) {
     let inputName = e.target.name;
@@ -25,18 +26,31 @@ function CheckoutForm() {
     newDataForm[inputName] = value;
     setDataForm(newDataForm);
   }
+  useEffect(() => {
+    if (
+      dataForm.name.length !== 0 &&
+      dataForm.phone.lenght !== 0 &&
+      dataForm.email.length !== 0
+    ) {
+      setFormValidation(true);
+    } else {
+      setFormValidation(false);
+    }
+  }, [dataForm]);
 
   function handleCheckout(e) {
     e.preventDefault();
-    const orderData = {
-      buyer: dataForm,
-      items: cart,
-      date: new Date(),
-      total: getTotalItemPrice(),
-    };
-    createBuyOrder(orderData).then((orderId) => {
-      navigate(`/checkout/${orderId}`);
-    });
+    if ((formValidation = true)) {
+      const orderData = {
+        buyer: dataForm,
+        items: cart,
+        date: new Date(),
+        total: getTotalItemPrice(),
+      };
+      createBuyOrder(orderData).then((orderId) => {
+        navigate(`/checkout/${orderId}`);
+      });
+    }
   }
   return (
     <div>
@@ -49,6 +63,7 @@ function CheckoutForm() {
               name="name"
               type="text"
               placeholder="Nombre"
+              autoComplete="off"
               required
             />
           </div>
@@ -59,6 +74,7 @@ function CheckoutForm() {
               name="phone"
               type="number"
               placeholder="Teléfono"
+              autoComplete="off"
               required
             />
           </div>
@@ -69,13 +85,22 @@ function CheckoutForm() {
               name="email"
               type="text"
               placeholder="Email"
+              autoComplete="off"
               required
             />
           </div>
         </div>
-        <Button onClick={handleCheckout} className="action-cart">
-          Finalizar Compra
-        </Button>
+        {formValidation === true ? (
+          <Button
+            onClick={handleCheckout}
+            className="action-cart"
+            variant="contained"
+          >
+            Finalizar Compra
+          </Button>
+        ) : (
+          <p className="data-petition">Complete los campos</p>
+        )}
       </form>
     </div>
   );
