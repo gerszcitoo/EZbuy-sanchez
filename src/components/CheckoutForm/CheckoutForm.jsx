@@ -40,7 +40,7 @@ function CheckoutForm() {
 
   function handleCheckout(e) {
     e.preventDefault();
-    if ((formValidation = true)) {
+    if (formValidation === true) {
       const orderData = {
         buyer: dataForm,
         items: cart,
@@ -100,7 +100,9 @@ function CheckoutForm() {
             Finalizar Compra
           </Button>
         ) : (
-          <p className="data-petition">Complete los campos</p>
+          <Button disabled className="action-cart" variant="contained">
+            Finalizar Compra
+          </Button>
         )}
       </form>
     </div>

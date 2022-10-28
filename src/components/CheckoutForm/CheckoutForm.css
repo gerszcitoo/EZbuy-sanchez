@@ -38,9 +38,3 @@ input[type="number"] {
   -moz-appearance: textfield;
   appearance: none;
 }
-
-/* ----WARNING MSG---- */
-.data-petition {
-  font-size: 0.7rem;
-  color: red;
-}
