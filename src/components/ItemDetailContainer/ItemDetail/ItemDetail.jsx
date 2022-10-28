@@ -7,18 +7,17 @@ import { cartContext } from "../../../context/cartContext";
 
 function ItemDetail(props) {
   const [countState, setCountState] = useState(false);
+  const { addItem } = useContext(cartContext);
   const toggleCountState = () => {
     setCountState((estado) => !estado);
   };
-  // ---CONTEXT---
-  const { addItem } = useContext(cartContext);
-  // ---HANDLER---
+
   function HandleAdd(count) {
     addItem(props, count);
     toggleCountState();
   }
   let info = props.data;
-  // -----RETURN ITEMDETAILS-----
+
   return (
     <div className="item-detail">
       {info.stock === 0 && <span>SIN STOCK</span>}

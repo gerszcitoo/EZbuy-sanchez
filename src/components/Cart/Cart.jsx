@@ -11,11 +11,9 @@ function Cart() {
   const { getTotalItemsInCart, emptyCart, getTotalItemPrice } = context;
 
   let isCartEmpty = true;
-  // if cart is not empty, shows cart
   if (getTotalItemsInCart() !== 0) {
     isCartEmpty = false;
   }
-  // if car is empty, shows message
   if (isCartEmpty) {
     return (
       <div className="empty-cart-body">
@@ -27,7 +25,6 @@ function Cart() {
     );
   }
 
-  // ---CART RETURN---
   return (
     <>
       <Button onClick={emptyCart} className="action-cart">

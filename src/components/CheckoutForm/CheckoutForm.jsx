@@ -7,9 +7,8 @@ import "./CheckoutForm.css";
 
 function CheckoutForm() {
   const context = useContext(cartContext);
-  const { cart, getTotalItemPrice } = context;
-
   const navigate = useNavigate();
+  const { cart, getTotalItemPrice } = context;
 
   const [dataForm, setDataForm] = useState({
     name: "",
@@ -26,6 +25,7 @@ function CheckoutForm() {
     newDataForm[inputName] = value;
     setDataForm(newDataForm);
   }
+
   useEffect(() => {
     if (
       dataForm.name.length !== 0 &&
@@ -52,6 +52,7 @@ function CheckoutForm() {
       });
     }
   }
+
   return (
     <div>
       <form className="form" onSubmit={handleCheckout}>

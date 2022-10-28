@@ -3,13 +3,13 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-
 import { cartContext } from "../../context/cartContext";
 
 function Checkout() {
   const context = useContext(cartContext);
   const { orderId } = useParams();
   const { emptyCart } = context;
+
   return (
     <div>
       <h2>¡Gracias por tu compra!</h2>

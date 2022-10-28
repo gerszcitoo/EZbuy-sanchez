@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Card(props) {
   let { brand, model, year, img, price, id } = props;
   const urlDetail = `/autos/${id}`;
-  // ---CARD RETURN---
+
   return (
     <div className="card">
       <div className="card-img">

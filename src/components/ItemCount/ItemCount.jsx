@@ -3,19 +3,20 @@ import React, { useState } from "react";
 import Button from "@mui/material/Button";
 
 function ItemCount({ stock, initial, onAdd }) {
-  // ----ADD AND TAKE FUNCTIONS----
   const [count, setCount] = useState(initial);
+
   function handleAdd() {
     if (count < stock) {
       setCount(count + 1);
     }
   }
+
   function handleTake() {
     if (count > initial) {
       setCount(count - 1);
     }
   }
-  // -----ITEMCOUNT RETURN----
+
   return (
     <div className="add-to-cart-container">
       <div className="item-count-container">

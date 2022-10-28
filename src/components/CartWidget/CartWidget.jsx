@@ -7,7 +7,7 @@ import Badge from "@mui/material/Badge";
 
 function CartWidget() {
   const { getTotalItemsInCart } = useContext(cartContext);
-  // -----CART RETURN-----
+
   return (
     <>
       <Badge badgeContent={getTotalItemsInCart()} color="error">

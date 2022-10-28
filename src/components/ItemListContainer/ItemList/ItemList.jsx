@@ -5,7 +5,6 @@ function ItemList(props) {
   return (
     <>
       {props.data.map((item) => {
-        // ---CARDS RETURN---
         return (
           <Item
             key={item.id}

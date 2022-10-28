@@ -8,7 +8,6 @@ function ItemDetailContainer() {
   const [data, setData] = useState({});
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  // use params for URL
   const { id } = useParams();
 
   useEffect(() => {
@@ -20,7 +19,6 @@ function ItemDetailContainer() {
       .finally(() => setIsLoading(false));
   }, [id]);
 
-  // if page loads => render this
   if (isLoading) {
     return (
       <>
@@ -34,7 +32,6 @@ function ItemDetailContainer() {
         )}
       </>
     );
-    // if there is an error => render this
   } else if (error) {
     return (
       <>
@@ -51,7 +48,6 @@ function ItemDetailContainer() {
         )}
       </>
     );
-    // if everything works => render this
   } else {
     return (
       <div className="item-detail-container">
@@ -60,7 +56,6 @@ function ItemDetailContainer() {
       </div>
     );
   }
-  // -----BODY RETURN-----
 }
 
 export default ItemDetailContainer;

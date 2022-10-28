@@ -27,15 +27,13 @@ function ItemListContainer(props) {
         .finally(() => setIsLoading(false));
     }
   }, [cat]);
-  // -----BODY RETURN-----
+
   return (
     <>
-      {/* ---HEADER--- */}
       <div className="header">
         <h1>{props.greeting}</h1>
       </div>
       <hr />
-      {/* ---CARDS--- */}
       {isLoading && <Loader />}
       <div className="content">
         <ItemList data={data} />
