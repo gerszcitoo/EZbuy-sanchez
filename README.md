@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+## SPANISH
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#acerca-del-proyecto">Acerca del proyecto</a> •
+  <a href="#cómo-usar">Cómo usar</a> •
+  <a href="#herramientas-utilizadas">Herramientas Utilizadas</a>
+</p>
 
-## Available Scripts
+## ENGLISH
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#about-the-project">About the project</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#tools-used">Tools Used</a>
+</p>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Acerca del proyecto
 
-### `npm test`
+Esta aplicación fue desarrollada por Germán Sánchez como proyecto final del curso de ReactJS, para la carrera de FullStack en [CoderHouse](https://www.coderhouse.com/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La consigna era realizar un Ecommerce implementando todo lo estudiado a lo largo del curso, obteniendo una aplicación funcional, interactiva y dinámica.
 
-### `npm run build`
+La aplicación se puede probar aquí [https://ezbuy-sanchez.netlify.app/](https://ezbuy-sanchez.netlify.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Cómo usar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para clonar y correr esta aplicación, necesitas tener [Git](https://git-scm.com) y [Node.js](https://nodejs.org/en/download/) (que viene con [npm](http://npmjs.com)) instalados en tu computadora. Luego ejecuta los siguientes comandos en la consola:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Clonar este repositorio
+$ git clone https://github.com/gerszcitoo/EZbuy-sanchez
 
-### `npm run eject`
+# Ingresar al repositorio
+$ cd EZbuy-sanchez
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Instalar dependencias
+$ npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Correr la aplicación
+$ npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Herramientas Utilizadas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Este proyecto utiliza las siguientes herramientas/paquetes:
 
-## Learn More
+- [ReactJS](https://reactjs.org/)
+- [React Router](https://reactrouter.com/en/main)
+- [Material UI](https://mui.com/)
+- [UI Ball](https://uiball.com/loaders/)
+- [Font Awesome](https://fontawesome.com/)
+- [Firebase](https://firebase.google.com/)
+- [Netlify](https://www.netlify.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## About the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This app was developed by Germán Sánchez as a final project of the ReactJS course, for the FullStack career at [CoderHouse](https://www.coderhouse.com/).
 
-### Analyzing the Bundle Size
+The task was to make an Ecommerce integrating everything we learned along the course, getting an app that's functional, interactive and dynamic.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The app can be tested here [https://ezbuy-sanchez.netlify.app/](https://ezbuy-sanchez.netlify.app/)
 
-### Making a Progressive Web App
+## How To Use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. Then do the following your command line:
 
-### Advanced Configuration
+```bash
+# Clone this repository
+$ git clone https://github.com/gerszcitoo/EZbuy-sanchez
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Go into the repository
+$ cd EZbuy-sanchez
 
-### Deployment
+# Install dependencies
+$ npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Run the app
+$ npm start
+```
 
-### `npm run build` fails to minify
+## Tools Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project uses the following tools/packages:
+
+- [ReactJS](https://reactjs.org/)
+- [React Router](https://reactrouter.com/en/main)
+- [Material UI](https://mui.com/)
+- [UI Ball](https://uiball.com/loaders/)
+- [Font Awesome](https://fontawesome.com/)
+- [Firebase](https://firebase.google.com/)
+- [Netlify](https://www.netlify.com/)
