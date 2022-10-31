@@ -1,5 +1,5 @@
 import "./Checkout.css";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -10,6 +10,10 @@ function Checkout() {
   const { orderId } = useParams();
   const { emptyCart } = context;
 
+  useEffect(() => {
+    emptyCart();
+  });
+
   return (
     <div>
       <h2>¡Gracias por tu compra!</h2>
@@ -17,9 +21,7 @@ function Checkout() {
       <p>Tu ID es</p>
       <p className="order-id">{orderId}</p>
       <Link to="/">
-        <Button variant="contained" onClick={() => emptyCart()}>
-          Volver al Inicio
-        </Button>
+        <Button variant="contained">Volver al Inicio</Button>
       </Link>
     </div>
   );
