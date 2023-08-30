@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { cartContext } from "../../context/cartContext";
-import { createBuyOrder } from "../../services/firestore";
+// import { createBuyOrder } from "../../services/mockAPI";
+import { createBuyOrder } from "../../services/mockAPI";
 import "./CheckoutForm.css";
 
 function CheckoutForm() {

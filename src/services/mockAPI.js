@@ -103,7 +103,7 @@ const data = [
 
 // ---ASYNC---
 // obtener todos los items
-export default function getItems() {
+export function getItems() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(data);
@@ -135,4 +135,12 @@ export function getSingleItem(idItem) {
       else reject(new Error("Item no encontrado"));
     }, 1500);
   });
+}
+
+export async function createBuyOrder(orderData) {
+  const date = new Date();
+  const timestamp = date.getTime();
+  const salt = crypto.getRandomValues(new Uint8Array(3));
+  const key = `${timestamp}_${salt.join("")}`;
+  return key;
 }
